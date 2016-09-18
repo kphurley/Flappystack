@@ -7,13 +7,20 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(player)
+
+		if(GameObject.FindGameObjectWithTag ("Player"))
+			player = GameObject.FindGameObjectWithTag ("Player").transform;
+
+		if (player)
 			transform.position = new Vector3 (player.position.x, 0, -10);
+		else {
+			transform.position = new Vector3 (0, 0, -10);
+		}
 		
 	}
 }
