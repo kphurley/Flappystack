@@ -10,8 +10,8 @@ set their display property to scaled -> more space to see the entire game window
 
 ## Building the Project
 - Download Unity and make a free account. [Unity 3D Link] (https://unity3d.com/)
-- Clone this repo with `git clone`
-- Open Unity, and in the initial starting screen, browse the Flappystack repo
+- Clone or fork this repo,`git clone`
+- Open Unity, and in the initial starting screen, browse for and open the Flappystack repo
 - Unity will build the project and you're off and running!
 
 (Note - when I rebuilt this on my machine the score text was misplaced...Consider that your first challenge to correct!)
