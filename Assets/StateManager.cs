@@ -7,7 +7,7 @@ public class StateManager : MonoBehaviour {
 	public bool gameIsRunning = false;
 	public GameObject scenerySpawner;
 	public GameObject player;
-	public GameObject canvas;
+	public static GameObject canvas;
 
 	// Use this for initialization
 	void Start () {
