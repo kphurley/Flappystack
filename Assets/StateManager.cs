@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class StateManager : MonoBehaviour {
 
@@ -8,15 +9,26 @@ public class StateManager : MonoBehaviour {
 	public GameObject scenerySpawner;
 	public GameObject player;
 	public static GameObject canvas;
+	public Text scoreText;
+	public int score = 0;
 
 	// Use this for initialization
 	void Start () {
 		canvas = GameObject.FindGameObjectWithTag ("Canvas");
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+		// This is how I am implementing keeping score
+		if (GameObject.FindGameObjectWithTag ("Player")) {
+			player = GameObject.FindGameObjectWithTag ("Player");
+			if(player.transform.position.x > 10)
+				score = (int)( Math.Floor (player.transform.position.x / 5 - 1));
+			scoreText.text = " " + score;
+		}
+			
 	}
 
 	public void StartGame() {
